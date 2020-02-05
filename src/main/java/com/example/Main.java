@@ -74,6 +74,16 @@ public class Main {
     }
   }
 
+  @RequestMapping("/hello")
+String hello(Map<String, Object> model) {
+  model.put("message", "Welcome to my app!");
+  return "hello";
+}
+@RequestMapping("/bob")
+String bob(Map<String, Object> model) {
+  model.put("message", "Welcome to my app!");
+  return "bob";
+}
   @Bean
   public DataSource dataSource() throws SQLException {
     if (dbUrl == null || dbUrl.isEmpty()) {
