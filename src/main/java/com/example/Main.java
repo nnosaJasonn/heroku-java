@@ -82,7 +82,7 @@ String hello(Map<String, Object> model) {
 @RequestMapping("/bob")
 String bob(Map<String, Object> model) {
   model.put("message", "Welcome to my app!");
-  return "bob";
+  return "bob"; 
 }
   @Bean
   public DataSource dataSource() throws SQLException {
