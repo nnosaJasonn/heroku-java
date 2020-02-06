@@ -34,6 +34,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
 
+
 @Controller
 @SpringBootApplication
 public class Main {
@@ -82,6 +83,7 @@ String hello(Map<String, Object> model) {
 @RequestMapping("/bob")
 String bob(Map<String, Object> model) {
   model.put("message", "Welcome to my app!");
+  model.put("product", new Product("hammer", 12.5, 13.2));
   return "bob"; 
 }
   @Bean
